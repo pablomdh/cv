@@ -50,7 +50,7 @@ work_experience = [
     ["Sr. Data Scientist – Uruguayan National Institute of Statistics (INE)", "05/2023 – Present",
      ["Designed and developed ETL processes for 50M+ administrative records, improving integration of heterogeneous data sources.",
       "Implemented validation procedures that reduced inconsistencies and strengthened statistical quality.",
-      "Built classification models in Python to estimate resident population, providing key inputs for official statistics (AUC 0.84 vs. baseline 0.73).",
+      "Built classification models in Python to estimate resident population, providing key inputs for official statistics. Achieved AUC 0.94 for residency and Accuracy 0.93 for location.",
       "Developed dashboards in Tableau and Superset to support institutional decision-making.",
       "Led the parallel development of a chatbot in Azure."]],
     
