@@ -36,5 +36,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add output/Pablo_Dubourdieu_CV.pdf output/preview.png
-          git commit -m "Auto-update CV and preview [skip ci]" || echo "No changes to commit"
+          git commit -m "Auto-update CV and preview (auto)" || echo "No changes to commit"
           git push
