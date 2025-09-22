@@ -4,7 +4,7 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import colors
 
 # Crear documento
-output_path = "Pablo_Dubourdieu_CV.pdf"
+output_path = "output/Pablo_Dubourdieu_CV.pdf"
 doc = SimpleDocTemplate(output_path, pagesize=A4, topMargin=20, bottomMargin=20)
 
 # Estilos

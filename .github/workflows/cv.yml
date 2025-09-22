@@ -1,0 +1,37 @@
+name: Build CV
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Generate CV PDF
+        run: python scripts/cv.py
+
+      - name: Generate Preview PNG
+        run: python scripts/preview.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/Pablo_Dubourdieu_CV.pdf output/preview.png
+          git commit -m "Auto-update CV and preview [skip ci]" || echo "No changes to commit"
+          git push
